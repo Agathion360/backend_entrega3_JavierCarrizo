@@ -12,47 +12,45 @@ export default class ProductManager {
         
     }
 
-//lectura de archivo products.json
-async initProduct(){
+async initProduct() {
     try {
-        const productData = await fs.promises.readFile(this.path, 'utf-8') 
-        this.products = JSON.parse(productData)
+        const data = await fs.promises.readFile(this.path, 'utf-8');
+        this.products = JSON.parse(data);
+
+        // Inicializa genId con el ID más alto en el array de productos, más uno
+        const highestId = this.products.reduce((max, product) => Math.max(max, product.id), 0);
+        ProductManager.genId = highestId + 1;
     } catch (error) {
-        console.error("Error al leer el archivo:", error.message)
+        console.error("Error al inicializar el producto:", error.message);
     }
-    
 }
 
 
+async addProduct(product) {
+    try {
+        await this.initProduct()
+        
+        product.id = ProductManager.genId++  //chequear este metodo
 
-
-    async addProduct(product) {
-       
-        try {
-            await this.initProduct()
-            
-            product.id = ProductManager.genId++  //chequear este metodo
-
-            if (this.products.some(prod => prod.code === product.code)) {
-                console.log(`Error, el código ${product.code} está repetido`)
-                return
-            } else if (!product.title || !product.description || !product.price || !product.code || !product.stock) {
-                console.log('Error, todos los campos son obligatorios')
-                return
-            } else {
-                this.products.push(product)
-                console.log('Producto agregado correctamente')
-                await fs.promises.writeFile(this.path, JSON.stringify(this.products, null, 2))
-
-            }
-
-        } catch (error) {
-            console.error("Error al agregar el producto:", error.message)
+        if (this.products.some(prod => prod.code === product.code)) {
+            console.log(`Error, el código ${product.code} está repetido`)
+            return
+        } else if (!product.title || !product.description || !product.price || !product.code || !product.stock) {
+            console.log('Error, todos los campos son obligatorios')
+            return
+        } else {
+            product.status = true;  // Agregar status por defecto
+            this.products.push(product)
+            console.log('Producto agregado correctamente')
+            await fs.promises.writeFile(this.path, JSON.stringify(this.products, null, 2))
         }
 
-
-
+    } catch (error) {
+        console.error("Error al agregar el producto:", error.message)
     }
+}
+
+
 
     async getProducts() {
         try{
@@ -123,42 +121,5 @@ async initProduct(){
         }
     }
 }
-const productManager = new ProductManager("./Products.json")
+const productManager = new ProductManager()
 
-
-
-//Metodos para probar el codigo
-
-// const product={
-//     title: 'Chomba Pique',
-//     description: 'Chomba pique de algodon, con cuello y puños de ribb.',
-//     price: 12000,
-//     thumbnail:'./img/chpique.jpg',
-//     code: 244,
-//     stock: 45,
-    
-// }
-
-
-//productManager.addProduct(product)
-
-
-
-// Obtener la lista de productos
-//console.log(productManager.getProducts())
-
-
-//busqueda de producto con el id 1
- //console.log(productManager.getProductsById(1))
-
-
-//busqueda de producto con el id 20 inexistente en el array
-//  console.log(productManager.getProductsById(20))
-
-
-//metodo para actualizar un producto con el id, se puede cambiar uno o varios campos
-//productManager.updateProduct(1,{title:"Chomba Pique", price: 10000})
-
-
-//metodo para eliminar un producto
-//console.log(productManager.deleteProduct(1))

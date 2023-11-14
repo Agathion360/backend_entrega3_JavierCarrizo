@@ -1,0 +1,49 @@
+.table-head{
+    background-color: beige;
+    height: 40px;
+    text-align: center;
+    text-transform: capitalize;
+    
+}
+
+.title-product{
+    text-transform: capitalize;
+}
+
+.description-product{
+    text-transform: lowercase;
+}
+
+.table2{
+    font-size: 12px;
+}
+
+.form-carga{
+    background-color: beige;
+    padding: 10px 20px 20px 20px;
+    border-radius: 20px;
+}
+
+.title-section{
+    margin-left: 35px;
+    margin-top: 30px;
+    font-style: italic;
+}
+
+.cols-table:hover{
+background-color: rgb(211, 211, 178);
+}
+
+
+.footer{
+    background-color: #e8ecef;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+.footer h6{
+    margin: 15px 0 0 30px;
+    font-weight: 300;
+}
+

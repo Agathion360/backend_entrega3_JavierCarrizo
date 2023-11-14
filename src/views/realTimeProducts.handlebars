@@ -1,0 +1,57 @@
+<h3 class="title-section">Create Product</h3>
+<hr>
+<br>
+
+<div class="container cont-principal">
+    <div class="row">
+       <div class="col-xl-3 pr-3 form-carga">
+            <form id='formProduct' class="d-grid ">					
+					<div class="mb-3">
+					<label for='title'>Title</label>
+					<input class="form-control" type='text' name='title' id="title" required />
+					</div>
+
+					<div class="mb-3">
+					<label for='description'>Description</label>
+					<textarea class="form-control"   name='description' id="description"></textarea>
+					</div>
+
+
+					<div class="mb-3">
+					<label for='price'>Price</label>
+					<input class="form-control" type='number' name='price' id="price" required />
+					</div>
+
+					<div class="mb-3">
+					<label for='code'>Code</label>
+					<input class="form-control" type='text' name='code' id="code" required />
+					</div>
+
+					<div class="mb-3">
+					<label for='stock'>Stock</label>
+					<input class="form-control" type='number' name='stock' id="stock" required />
+					</div>
+
+					<button class="btn btn-success " type="submit"><i class="fa-regular fa-floppy-disk"></i> Crear Producto</button>
+				   </form>
+        </div>
+
+        <div class="col-xl-9 d-flex justify-content-center align-items-center">
+            <table class="col-12">
+                <thead>
+                    <tr class="table-head">
+                        <th class="col-1 mx-6">id</th>
+                        <th class="col-2 mx-6">Title</th>
+                        <th class="col-3 mx-6">description</th>
+                        <th class="col-2 mx-6">price</th>
+                        <th class="col-1 mx-6">status</th>
+                        <th class="col-2 mx-6">code</th>
+                        <th class="col-1 mx-6">stock</th>
+                    </tr>
+                </thead>
+                <tbody id='productTable'>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

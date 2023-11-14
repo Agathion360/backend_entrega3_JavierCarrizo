@@ -6,7 +6,8 @@
     "thumbnail": "./img/pantalon.jpg",
     "code": 34,
     "stock": 50,
-    "id": 1
+    "id": 1,
+    "status": true
   },
   {
     "title": "Camisa",
@@ -15,7 +16,8 @@
     "thumbnail": "./img/camisa25.jpg",
     "code": 124,
     "stock": 10,
-    "id": 2
+    "id": 2,
+    "status": true
   },
   {
     "title": "Chomba Pique",
@@ -24,7 +26,8 @@
     "thumbnail": "./img/chpique.jpg",
     "code": 244,
     "stock": 45,
-    "id": 3
+    "id": 3,
+    "status": true
   },
   {
     "title": "Jean Azul",
@@ -33,7 +36,8 @@
     "thumbnail": "./img/jean.jpg",
     "code": 437,
     "stock": 30,
-    "id": 4
+    "id": 4,
+    "status": true
   },
   {
     "title": "Campera de Cuero",
@@ -42,7 +46,8 @@
     "thumbnail": "./img/campera.jpg",
     "code": 589,
     "stock": 12,
-    "id": 5
+    "id": 5,
+    "status": true
   },
   {
     "title": "Vestido de Noche",
@@ -51,7 +56,8 @@
     "thumbnail": "./img/vestido.jpg",
     "code": 773,
     "stock": 20,
-    "id": 6
+    "id": 6,
+    "status": true
   },
   {
     "title": "Zapatillas Deportivas",
@@ -60,7 +66,8 @@
     "thumbnail": "./img/zapatillas.jpg",
     "code": 326,
     "stock": 40,
-    "id": 7
+    "id": 7,
+    "status": true
   },
   {
     "title": "Sombrero de Verano",
@@ -69,7 +76,8 @@
     "thumbnail": "./img/sombrero.jpg",
     "code": 824,
     "stock": 15,
-    "id": 8
+    "id": 8,
+    "status": true
   },
   {
     "title": "Sweater de Lana",
@@ -78,7 +86,8 @@
     "thumbnail": "./img/sweater.jpg",
     "code": 192,
     "stock": 25,
-    "id": 9
+    "id": 9,
+    "status": true
   },
   {
     "title": "Shorts de Playa",
@@ -87,7 +96,8 @@
     "thumbnail": "./img/shorts.jpg",
     "code": 621,
     "stock": 35,
-    "id": 10
+    "id": 10,
+    "status": true
   },
   {
     "title": "Blusa Estampada",
@@ -96,7 +106,8 @@
     "thumbnail": "./img/blusa.jpg",
     "code": 467,
     "stock": 18,
-    "id": 11
+    "id": 11,
+    "status": true
   },
   {
     "title": "Gorra de Béisbol",
@@ -105,7 +116,8 @@
     "thumbnail": "./img/gorra.jpg",
     "code": 835,
     "stock": 50,
-    "id": 12
+    "id": 12,
+    "status": true
   },
   {
     "title": "Pijama de Seda",
@@ -114,6 +126,8 @@
     "thumbnail": "./img/pijama.jpg",
     "code": 591,
     "stock": 10,
-    "id": 13
+    "id": 13,
+    "status": true
   }
+  
 ]
